@@ -1,5 +1,5 @@
 {
-  "name": "frontend-project-46",
+  "name": "@hexlet/code",
   "version": "1.0.0",
   "type": "module",
   "description": "Project: difference calculator",
@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/MeJlukc/frontend-project-46/issues"
   },
-  "homepage": "https://github.com/MeJlukc/frontend-project-46#readme"
+  "homepage": "https://github.com/MeJlukc/frontend-project-46#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.26.0",
+    "eslint": "^9.26.0",
+    "globals": "^16.1.0"
+  }
 }

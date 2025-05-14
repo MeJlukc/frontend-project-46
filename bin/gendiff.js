@@ -2,7 +2,6 @@ const { program } = require('commander');
 
 program
     .description('Compares two configuration files and shows a difference.')
-    .version('0.1.0', '-V, --vesrion', 'output the version number')
-    .option('-h, --help', 'display help for command');
+    .version('0.1.0', '-V, --version', 'output the version number');
 
 program.parse(process.argv);

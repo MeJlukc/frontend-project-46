@@ -1,7 +1,7 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "type": "module",
+  "type": "commonjs",
   "description": "Project: difference calculator",
   "main": "index.js",
   "scripts": {
@@ -21,5 +21,9 @@
     "@eslint/js": "^9.26.0",
     "eslint": "^9.26.0",
     "globals": "^16.1.0"
+  },
+  "dependencies": {
+    "comander": "^0.0.1-security",
+    "commander": "^13.1.0"
   }
 }

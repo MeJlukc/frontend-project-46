@@ -1,12 +1,12 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "type": "commonjs",
+  "type": "module",
   "bin": {
-	  "gendiff": "bin/gendiff.js"
+    "gendiff": "bin/gendiff.js"
   },
-  "description": "Project: difference calculator",
   "main": "index.js",
+  "description": "Project: difference calculator",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "comander": "^0.0.1-security",
-    "commander": "^13.1.0"
+    "commander": "^13.1.0",
+    "js-yaml": "^4.1.0"
   }
 }

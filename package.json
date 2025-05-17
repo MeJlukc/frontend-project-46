@@ -2,6 +2,9 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "type": "commonjs",
+  "bin": {
+	  "gendiff": "bin/gendiff.js"
+  },
   "description": "Project: difference calculator",
   "main": "index.js",
   "scripts": {

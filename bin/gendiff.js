@@ -1,3 +1,5 @@
+#!/usr/bin/end node
+
 const { program } = require('commander');
 
 program
@@ -8,3 +10,5 @@ program
     .option('-f, --format [type]', 'output format');
 
 program.parse(process.argv);
+
+console.log('test');

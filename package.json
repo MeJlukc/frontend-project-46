@@ -28,6 +28,7 @@
   "dependencies": {
     "comander": "^0.0.1-security",
     "commander": "^13.1.0",
-    "js-yaml": "^4.1.0"
+    "js-yaml": "^4.1.0",
+    "lodash": "^4.17.21"
   }
 }

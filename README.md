@@ -1,4 +1,4 @@
-##Examle usage
+## Examle usage
 https://asciinema.org/a/mdSyYzus1hwXmQwwocZSk9u8M
 
 ### Hexlet tests and linter status:

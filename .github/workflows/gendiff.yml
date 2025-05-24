@@ -5,5 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: npm init @eslint/config-latest
+      - uses: action/setup-node@v4
+      - uses: action/setup-eslint@v4
+      - run: npm install
       - run: make lint

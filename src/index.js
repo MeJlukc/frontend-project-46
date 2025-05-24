@@ -1,7 +1,7 @@
 import _ from 'lodash';
-import { getDataType, getPath, readData} from './utilities.js';
-import formattingOutput from './formattingOutput.js';
+import { getDataType, readData} from './utilities.js';
 import parse from './parse.js';
+// import formattingOutput from './formattingOutput.js';
 
 const getDiff = (data1, data2) => {
   const keys = _.sortBy([...new Set([...Object.keys(data1), ...Object.keys(data2)])]);

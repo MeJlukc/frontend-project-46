@@ -3,7 +3,7 @@ import path from 'path';
 
 const getDataType = (data) => data.split('.').at(-1);
 
-const getPath = (data) => path.resolve(process.cwd(), data);
+const getPath = (data) => path.resolve(data);
 
 const readData = (data) => fs.readFileSync(getPath(data), 'utf-8');
 

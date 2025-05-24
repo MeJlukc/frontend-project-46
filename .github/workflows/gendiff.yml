@@ -1,11 +1,12 @@
 name: gendiff
 on: push
 jobs:
-  build:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: action/setup-node@v4
-      - uses: action/setup-eslint@v4
-      - run: npm install
+      - run: | 
+        npm install
+        npm install eslint --save-dev
       - run: make lint

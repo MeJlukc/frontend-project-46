@@ -1,0 +1,11 @@
+{
+	"  Courses": 5,
+	"- Disciplines": "Database, Python, Higher mate, Physics",
+	"+ Disciplines": "Database, C#, Higher mate, Physics",
+	"  EndOfLessons": "21.06.25",
+	"- Group": "P-524",
+	"+ Group": "P-522",
+	"+ LastExam": "17.06.25",
+	"- ValueStudents": 21,
+	"+ ValueStudents": 18
+}

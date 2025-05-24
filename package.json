@@ -8,7 +8,7 @@
   "main": "index.js",
   "description": "Project: difference calculator",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -23,7 +23,8 @@
   "devDependencies": {
     "@eslint/js": "^9.26.0",
     "eslint": "^9.26.0",
-    "globals": "^16.1.0"
+    "globals": "^16.1.0",
+    "jest": "^29.7.0"
   },
   "dependencies": {
     "comander": "^0.0.1-security",

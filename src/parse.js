@@ -2,11 +2,11 @@ import * as yaml from 'js-yaml';
 
 const parse = (data, type) => {
     switch (type) {
-        case 'json':
+        case '.json':
             return JSON.parse(data);
-        case 'yaml':
+        case '.yaml':
             return yaml.load(data);
-        case 'yml':
+        case '.yml':
             return yaml.load(data);
         default:
             throw Error(`Unsupported data type: ${type}`);

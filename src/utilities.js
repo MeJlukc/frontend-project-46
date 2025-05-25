@@ -1,7 +1,7 @@
 import * as fs from 'node:fs';
 import path from 'path';
 
-const getDataType = (data) => data.split('.').at(-1);
+const getDataType = (data) => path.extname(data);
 
 const getPath = (data) => path.resolve(data);
 

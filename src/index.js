@@ -41,6 +41,12 @@ const genDiff = (filepath1, filepath2) => {
     const result = getDiff(parsedData1, parsedData2);
     return result;
     // return formattingOutput(result);
+
+    /*Примечение для меня:
+    getDiff() возвращает объект, в ключе которого СТРОКА
+    я кое как добился того, чтобы прооходили тесты и поэтому функцию getDiff() НЕ ТРОГАТЬ РУКИ ОТОРВУ
+    все дальнейшие изменения для вывода в строку в соответствии с образцом (без кавычек) - реализовывать через
+    функцию с форматированием полученного из getDiff()*/
 };
 
 export default genDiff;

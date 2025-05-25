@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import parse from './parse.js';
 import formattingOutput from './format/formattingOutput.js';
 import buildDiffTree from './buildDiffTree.js';

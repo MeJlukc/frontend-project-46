@@ -17,14 +17,14 @@ const stringify = (value, depth) => {
     return `{\n${lines.join('\n')}\n${getIndent(depth)}}`;
 };
 
-const formattingOutput = (tree, depth = 1) => {
+const stylish = (tree, depth = 1) => {
     const lines = tree.map((node) => {
         const indent = getIndent(depth, 'sign');
         const currentIndent = getIndent(depth);
 
         switch (node.type) {
             case 'nested':
-                return `${currentIndent}${node.key}: ${formattingOutput(node.children, depth + 1)}`;
+                return `${currentIndent}${node.key}: ${stylish(node.children, depth + 1)}`;
             case 'added':
                     return `${indent}+ ${node.key}: ${stringify(node.value, depth)}`;
             case 'removed':
@@ -42,4 +42,4 @@ const formattingOutput = (tree, depth = 1) => {
     return `{\n${lines.join('\n')}\n${getIndent(depth - 1)}}`;
 };
 
-export default formattingOutput;
+export default stylish;

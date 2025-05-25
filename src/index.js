@@ -1,10 +1,10 @@
 import _ from 'lodash';
 import parse from './parse.js';
-import formattingOutput from './formattingOutput.js';
+import formattingOutput from './format/formattingOutput.js';
 import buildDiffTree from './buildDiffTree.js';
 import { getDataType, readData} from './utilities.js';
 
-const genDiff = (filepath1, filepath2, format) => {
+const genDiff = (filepath1, filepath2, format = 'stylish') => {
     const data1 = readData(filepath1);
     const data2 = readData(filepath2);
     const dataType1 = getDataType(filepath1);

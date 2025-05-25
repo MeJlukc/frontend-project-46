@@ -9,7 +9,7 @@ const parse = (data, type) => {
         case '.yml':
             return yaml.load(data);
         default:
-            throw Error(`Unsupported data type: ${type}`);
+            throw new Error(`Unsupported data type: ${type}`);
 
     }
 };

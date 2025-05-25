@@ -1,4 +1,4 @@
-name: gendiff
+name: gendiff-autocheck
 on: push
 jobs:
   lint:

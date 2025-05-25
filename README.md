@@ -1,4 +1,4 @@
-#### Project "Difference calculator"  
+## Project "Difference calculator"  
 Allow compare two files and get difference in the content  
 
 ### Minimum requirements:  
@@ -7,8 +7,7 @@ Allow compare two files and get difference in the content
 ### Usage example:  
 ![Video](https://asciinema.org/a/mdSyYzus1hwXmQwwocZSk9u8M)  
 
-### Tests and linter statuses:
-[![Actions Status](https://github.com/MeJlukc/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/MeJlukc/frontend-project-46/actions)  
+### Tests and linter status:
+[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=MeJlukc_frontend-project-46)](https://sonarcloud.io/summary/new_code?id=MeJlukc_frontend-project-46) 
+[![Actions Status](https://github.com/MeJlukc/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/MeJlukc/frontend-project-46/actions) 
 [![gendiff](https://github.com/MeJlukc/frontend-project-46/actions/workflows/gendiff.yml/badge.svg)](https://github.com/MeJlukc/frontend-project-46/actions/workflows/gendiff.yml)  
-[![SonarQube Cloud](https://sonarcloud.io/images/project_badges/sonarcloud-light.svg)](https://sonarcloud.io/summary/new_code?id=MeJlukc_frontend-project-46)  
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=MeJlukc_frontend-project-46&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=MeJlukc_frontend-project-46)

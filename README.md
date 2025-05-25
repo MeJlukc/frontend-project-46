@@ -4,7 +4,8 @@ Allow compare two files and get difference in the content
 ### Minimum requirements:  
 - node.js (v18.19.x or above)  
 
-### Usage example:  
+### Usage example:
+![Demo](./media/demo.gif)  
 https://asciinema.org/a/mdSyYzus1hwXmQwwocZSk9u8M
 
 #### Tests and linter status:

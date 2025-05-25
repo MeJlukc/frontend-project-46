@@ -1,2 +1,6 @@
 lint:
-	npx eslint **/*.js
+	npx eslint **/*.js  
+
+install:
+	npm install
+	npm ci

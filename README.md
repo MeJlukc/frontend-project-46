@@ -1,12 +1,17 @@
 ## Project "Difference calculator"  
-Allow compare two files and get difference in the content  
+Allow compare two files and get difference in the content.  
+
+The utility supports .json and .yaml file extention. Use `gendiff --help` to get more information.  
 
 ### Minimum requirements:  
 - node.js (v18.19.x or above)  
 
 ### Usage example:
 ![Demo](./media/demo.gif)  
-https://asciinema.org/a/mdSyYzus1hwXmQwwocZSk9u8M
+
+### Installation guide:
+1. Clone the repository `git clone`
+2. Run the command `make install`  
 
 #### Tests and linter status:
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=MeJlukc_frontend-project-46&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=MeJlukc_frontend-project-46) 

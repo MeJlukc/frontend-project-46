@@ -1,4 +1,4 @@
-#!/usr/bin/end node
+#!/usr/bin/env node
 
 import getDiff from '../index.js';
 import { Command } from 'commander';

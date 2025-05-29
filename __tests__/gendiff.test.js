@@ -14,3 +14,9 @@ test('Compare .yml files', () => {
     const expected = readData('__fixtures__/testFileResult.txt');
     expect(normalize(result)).toEqual(normalize(expected));
 });
+
+test('Plain formatting', () => {
+    const result = genDiff('__fixtures__/testFile1.json', '__fixtures__/testFile2.json', 'plain');
+    const expected = readData('__fixtures__/testFileResultPlain.txt');
+    expect(normalize(result)).toEqual(normalize(expected));
+});

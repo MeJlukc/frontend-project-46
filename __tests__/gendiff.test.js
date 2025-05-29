@@ -20,3 +20,9 @@ test('Plain formatting', () => {
     const expected = readData('__fixtures__/testFileResultPlain.txt');
     expect(normalize(result)).toEqual(normalize(expected));
 });
+
+test('JSON formatting', () => {
+    const result = genDiff('__fixtures__/testFile1.json', '__fixtures__/testFile2.json', 'json');
+    const expected = readData('__fixtures__/testFileResultJson.txt');
+    expect(normalize(result)).toEqual(normalize(expected));
+})

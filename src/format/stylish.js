@@ -1,45 +1,45 @@
 import _ from 'lodash';
 
-const getIndent = (depth, type = 'normal') => {
-    const baseIndent = ' '.repeat(depth * 4);
-    if (type === 'sign') return baseIndent.slice(0, -2);
-    return baseIndent;
-};
+const getIndent = (depth) => ' '.repeat(depth * 4);
 
 const stringify = (value, depth) => {
-    if (!_.isPlainObject(value)) return String(value);
+  if (!_.isPlainObject(value)) return String(value);
 
-    const lines = Object.entries(value).map(
-        ([key, val]) =>
-        `${getIndent(depth + 1)}${key}: ${stringify(val, depth + 1)}`
-    );
+  const indent = getIndent(depth + 1);
+  const closingIndent = getIndent(depth);
 
-    return `{\n${lines.join('\n')}\n${getIndent(depth)}}`;
+  const lines = Object.entries(value).map(
+    ([key, val]) => `${indent}${key}: ${stringify(val, depth + 1)}`
+  );
+
+  return `{\n${lines.join('\n')}\n${closingIndent}}`;
 };
 
 const stylish = (tree, depth = 1) => {
-    const lines = tree.map((node) => {
-        const indent = getIndent(depth, 'sign');
-        const currentIndent = getIndent(depth);
+  const indent = getIndent(depth).slice(0, -2);
+  const closingIndent = getIndent(depth - 1);
 
-        switch (node.type) {
-            case 'nested':
-                return `${currentIndent}${node.key}: ${stylish(node.children, depth + 1)}`;
-            case 'added':
-                    return `${indent}+ ${node.key}: ${stringify(node.value, depth)}`;
-            case 'removed':
-                return `${indent}- ${node.key}: ${stringify(node.value, depth)}`;
-            case 'unchanged':
-                return `${currentIndent}${node.key}: ${stringify(node.value, depth)}`;
-            case 'changed':
-                return [
-                        `${indent}- ${node.key}: ${stringify(node.value1, depth)}`,
-                        `${indent}+ ${node.key}: ${stringify(node.value2, depth)}`
-                        ].join('\n');
-        }
-    });
+  const makeLine = (sign, key, value) =>
+    `${indent}${sign} ${key}: ${stringify(value, depth)}`;
 
-    return `{\n${lines.join('\n')}\n${getIndent(depth - 1)}}`;
+  const formatters = {
+    added: (node) => makeLine('+', node.key, node.value),
+    removed: (node) => makeLine('-', node.key, node.value),
+    unchanged: (node) => makeLine(' ', node.key, node.value),
+    changed: (node) => [
+      makeLine('-', node.key, node.value1),
+      makeLine('+', node.key, node.value2),
+    ],
+    nested: (node) =>
+      `${getIndent(depth)}${node.key}: ${stylish(node.children, depth + 1)}`,
+  };
+
+  const lines = tree.flatMap((node) => {
+    const formatter = formatters[node.type];
+    return formatter(node);
+  });
+
+  return `{\n${lines.join('\n')}\n${closingIndent}}`;
 };
 
 export default stylish;

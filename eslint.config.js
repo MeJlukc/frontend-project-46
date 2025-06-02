@@ -4,9 +4,18 @@ import pluginJs from "@eslint/js";
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
-  {languageOptions: { globals: globals.browser }},
-  {rules: {
-    "semi": [2, "never"],
-  }},
-  pluginJs.configs.recommended,
+  {
+    ignores: ['**/__fixtures__/**'],
+  },
+  {
+    languageOptions: 
+    { globals: globals.browser },
+  },
+  {
+    ...pluginJs.configs.recommended,
+    rules: {
+      ...pluginJs.configs.recommended.rules,
+      'no-extra-semi': 'off',
+    }
+  },
 ];
